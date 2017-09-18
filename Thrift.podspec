@@ -8,15 +8,15 @@
 
 Pod::Spec.new do |s|
 s.name             = "Thrift"
-s.version          = "20170207"
-s.summary          = "Thrift framework in Swift 3.0"
+s.version          = "20170918.6"
+s.summary          = "Thrift framework in Swift 3.2"
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-s.description      = "Thrift framework in Swift 3.0"
+s.description      = "Thrift framework in Swift 3.2"
 
 s.homepage         = "https://github.com/eysteinbye/thrift"
 s.license          = 'Proprietary'
@@ -25,7 +25,7 @@ s.author           = { "Mr. Jenkins" => "jenkins-ops@zedge.net" }
 s.platform     = :ios, '9.0'
 s.requires_arc = true
 
-s.source       = { :path => "." }
+s.source       = { :git => "https://github.com/eysteinbye/thrift.git", :branch => "master" }
 
 s.source_files = 
 "LinuxHelper.swift", 
