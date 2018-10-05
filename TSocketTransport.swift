@@ -72,7 +72,7 @@ public class TCFSocketTransport: TStreamTransport {
     var readStream:  Unmanaged<CFReadStream>?
     var writeStream:  Unmanaged<CFWriteStream>?
     CFStreamCreatePairWithSocketToHost(kCFAllocatorDefault,
-                                       hostname as CFString!,
+                                       hostname as CFString,
                                        UInt32(port),
                                        &readStream,
                                        &writeStream)
@@ -83,11 +83,11 @@ public class TCFSocketTransport: TStreamTransport {
       CFWriteStreamSetProperty(writeStream, .shouldCloseNativeSocket, kCFBooleanTrue)
 
       inputStream = readStream as InputStream
-      inputStream.schedule(in: .current, forMode: .defaultRunLoopMode)
+      inputStream.schedule(in: .current, forMode: .default)
       inputStream.open()
       
       outputStream = writeStream as OutputStream
-      outputStream.schedule(in: .current, forMode: .defaultRunLoopMode)
+      outputStream.schedule(in: .current, forMode: .default)
       outputStream.open()
       
     } else {
