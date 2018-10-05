@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 s.name             = "Thrift"
 s.version          = "20181005"
 s.summary          = "Thrift framework in Swift 4.2"
-
+s.swift_version    = '4.2'
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
@@ -45,7 +45,7 @@ s.source_files =
     "TMemoryBufferTransport.swift",
     "TMultiplexedProtocol.swift",
     "TProcessor.swift",
-    "TProtocol.swift", 
+    "TProtocol.swift",
     "TProtocolError.swift",
     "TSSLSocketTransport.swift",
     "TSSLSocketTransportError.swift",
